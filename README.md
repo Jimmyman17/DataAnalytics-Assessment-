@@ -89,4 +89,37 @@ Solution: Used chained CTEs to break the query into readable steps and reuse der
 
 
 
+
+SQL Project: Account Inactivity Analysis
+ Assessment_Q3.sql Overview
+This project involves analyzing savings account data to identify inactive accounts based on their last transaction date. Using SQL Server, the solution computes the number of days since each account's most recent confirmed transaction.
+
+
+Identify account inactivity duration
+Approach:
+- A Common Table Expression (CTE) named `account_inactivity` was used to:
+  - Join the `savings_savingsaccount` and `plans_plan` tables on `owner_id`.
+  - Filter out records with NULL `confirmed_amount` values to ensure only completed transactions are included.
+  - Categorize each account as either `Saving` or `Investment` using a `CASE` expression based on boolean flags in `plans_plan`.
+  - Compute the `MAX(transaction_date)` per plan to identify the last activity date.
+- The outer `SELECT` retrieves all the processed fields and calculates the number of days of inactivity using `DATEDIFF(DAY, last_transaction_date, GETDATE())`.
+
+
+Challenges and Resolutions
+1. Complex `CASE` in `GROUP BY` Clause Challenge:
+- SQL Server requires expressions used in `SELECT` to be explicitly repeated in `GROUP BY` if they aren't simple column references.
+Resolution:
+- The `CASE` expression used to define the plan type was repeated in the `GROUP BY` clause to ensure compliance with SQL Server syntax.
+
+ 2. Formatting and Readability
+Challenge:
+- Ensuring that the logic remained intact while making the SQL readable and maintainable.
+Resolution: 
+- Indentation and commenting were added to improve clarity without altering the functional logic.
+
+ Summary
+This solution enables stakeholders to view the inactivity length of customer accounts, supporting better decision-making in user engagement and reactivation strategies.
+
+
+
 Feel free to reach out for clarifications or further optimizations!
