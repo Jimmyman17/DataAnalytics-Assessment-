@@ -97,10 +97,11 @@ Preventing division by zero with NULLIF.
 Contact
 For any clarifications or further optimization suggestions, feel free to reach out!
 
-Author: Nwadim Chukwuma Nestor
+🧑‍💼 Author
+**Nwadim Chukwuma Nestor**
+Electronic and Computer Engineer | Data Analyst
+_Microsoft SQL Server • Data Modeling • ETL & Warehousing_
 Email: nwadimnestor@gmail.com
-
-
 
 
 
