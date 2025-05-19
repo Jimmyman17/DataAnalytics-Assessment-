@@ -99,3 +99,13 @@ For any clarifications or further optimization suggestions, feel free to reach o
 
 Author: Nwadim Chukwuma Nestor
 Email: nwadimnestor@gmail.com
+
+
+
+
+
+
+NOTE FOR THIS ASSESSMENT I HAD TO CLONED THE DATABASE DUE TO SOME ISSUES 
+If you want to see it clink on this link below
+https://github.com/Jimmyman17/Database-Creation-using-DDL-statement
+Thank you.
